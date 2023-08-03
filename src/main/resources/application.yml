@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: update
+  properties:
+    hibernate:
+      package-to-scan: com.example.fakeapi.infrastructure.entities
+      format_sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: true
+
+fake-api:
+  url: 'https://fakestoreapi.com'
+
+server:
+  port: 8181
+
+users:
+  registration:
+    admin-username: admin@email.com
+    admin-pwd: 1
+
+    roles: ['ADMIN', 'USER']
