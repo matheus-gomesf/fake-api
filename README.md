@@ -1,2 +1,2 @@
 # fake-api
-A simple API using *spring security* and *openfeign*
+A simple API to study using *spring security* and *openfeign*
